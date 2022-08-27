@@ -4,13 +4,14 @@
     user-select: none;
     font-family: 'Montserrat', sans-serif;
 }
-
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #f9f9f9;
+}
+main {
+    margin-top: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
 .card {
@@ -95,4 +96,64 @@ body {
 .card:hover .icons {
     opacity: 1;
     transform: translateY(160px);
+}
+
+/* .Welcome Notification */
+
+.notification {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-family: gilroy;
+    max-width: 250px;
+    padding: 25px 15px;
+    border-radius: 4px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 4s linear forwards;
+}
+
+.progress {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, #529bdb, #3250bf);
+    border-radius: 4px;
+    animation: progress 3s .25s linear forwards;
+}
+
+@keyframes fade {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes progress {
+    to {
+        width: calc(100% - 10px);
+    }
 }
