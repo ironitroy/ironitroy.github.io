@@ -213,3 +213,18 @@ background-position: 200% center;
         margin-bottom: 20px;
 }
 
+}
+footer {
+    background-color: #6200EE;
+padding: 10px 0px;
+}
+
+.fa-instagram, .fa-twitter, .fa-linkedin{
+    color: white;
+    padding: 0px 20px;
+}
+
+.iconfooter {
+display: block;
+margin: 0px auto;
+}
